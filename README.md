@@ -1,23 +1,58 @@
-# Password Vault Practices
-a readme describing my workflow for a flexible password vault that isn't constrained to a single company's ownership.
+# Password Vault Practices 
 
-So, there's an open source program called keepass2
-https://keepass.info/
 
-You only need to use it once to generate an AES-256+ encrypted database file.
+This guide outlines a flexible workflow for managing your passwords using open-source tools, ensuring that your sensitive information isn't confined to a single company's ecosystem.
 
-Then what I did was I stuck it in my onedrive folder. Which onedrive is 100% free for like 5GB or something. 
 
-Then, there's a 100% open source app on github called keeweb. It's a downloadable and installable desktop app.
-https://keeweb.info/ You login to your onedrive through the app a single time. And it links to your database file you created. Then whenever you open the keeweb app, it makes you type in your database file's password.
+## Step 1: Generate an Encrypted Database with KeePass 
 
-On iOS, there's an extremely polished app written by one of the same developers who worked on keeweb called StrongBox. It's free for 90 whole days, and then like $10 for the full app for life. And you just do a one-time link up to your onedrive, point it to the database file, and boom you're done. I love strongbox because it has password auto fill on your phone, and it works with face id or touch id or a pin.
+Begin by using [KeePass](https://keepass.info/) , an open-source password manager, to create an AES-256 encrypted database file. This file will securely store all your passwords and related information.
 
-The best part about doing it this method is /you/ are in control of where your database file with all of your passwords, account information, etc live.
-If you suddenly hate onedrive one day. NBD, move it to another storage service you trust more. (google drive, dropbox, {insert-storage-company-name-here}, heck, you can even put the databse file on your computer and link it to your devices via an FTP filezilla server (not recommend because if your internet or power goes out you lose connection to your computer lol)
-The point is, you kinda permanently control where your really important and private data is instead of trusting a service like microsoft authenticator, or lastpass, or finalpass, or keyvault, etc
-Even microsoft onedrive doesn't have actual access to your passwords because all it's doing is storing the encrypted database file. They would have to know the password to the database file to open it. Which is only entered through the tunnel from keeweb or strongbox
-Plus, keeweb has a TON of features
+## Step 2: Store the Database in a Cloud Service 
 
-you can create folders, example I have a folder for personal, work, and for family because my parents always forget their passwords
-you can store images, attachments like pdfs, and even pictures of your credit cards or something. You can create a customized field for any account. example if I wanna access my becu, I just open keeweb, type in my master password, search becu, click the becu link and it will auto fill the password and account because I did it from the password vault app
+
+Place your KeePass database file in a cloud storage service like OneDrive, which offers 5GB of free storage. This setup allows you to access your password database from multiple devices.
+
+
+## Step 3: Access Your Passwords on Different Platforms 
+
+
+### Desktop Access with KeeWeb 
+
+[KeeWeb](https://keeweb.info/)  is an open-source desktop application that integrates seamlessly with cloud services:
+ 
+- **One-Time Setup** : Log in to your OneDrive account through KeeWeb and link it to your KeePass database file.
+ 
+- **Secure Access** : Each time you open KeeWeb, you'll be prompted to enter your database password, ensuring secure access to your credentials.
+
+
+### Mobile Access with StrongBox (iOS) 
+
+For iOS users, [StrongBox](https://strongboxsafe.com/)  offers a polished experience:
+ 
+- **Initial Setup** : Link StrongBox to your OneDrive account and point it to your KeePass database file.
+ 
+- **Features** : Enjoy password autofill, Face ID or Touch ID authentication, and a user-friendly interface.
+ 
+- **Pricing** : Free for the first 90 days, with a one-time purchase option for lifetime access.
+
+
+## Benefits of This Approach 
+
+ 
+- **Control Over Your Data** : You decide where your encrypted database resides, whether it's OneDrive, Google Drive, Dropbox, or even a personal FTP server. This flexibility means you're not locked into a single service provider.
+ 
+- **Enhanced Security** : Cloud storage services only hold your encrypted database file. Without your master password, accessing the contents is virtually impossible.
+ 
+- **Rich Features** : KeeWeb offers functionalities like:
+
+  - Organizing entries into folders (e.g., personal, work, family).
+
+  - Storing images and attachments, such as PDFs or photos of credit cards.
+
+  - Creating custom fields for specific account details.
+
+  - Autofilling credentials directly from the app.
+
+
+By adopting this workflow, you maintain full control over your sensitive data, leveraging open-source tools and flexible storage options to manage your passwords securely and efficiently.
